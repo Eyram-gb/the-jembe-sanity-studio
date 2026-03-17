@@ -4,6 +4,13 @@ export const post = defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
+  orderings: [
+    {
+      title: 'Manual Order',
+      name: 'manualOrder',
+      by: [{field: 'orderRank', direction: 'asc'}],
+    },
+  ],
   fields: [
     defineField({
       name: 'title',
@@ -61,6 +68,22 @@ export const post = defineType({
       name: 'body',
       type: 'array',
       of: [{type: 'block'}],
+    }),
+    defineField({
+      name: 'orderRank',
+      title: 'Order Rank',
+      type: 'string',
+      hidden: true,
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'seo',
+      description: 'Override metadata for this post. Falls back to the post title, body preview, and image if left blank.',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
     }),
   ],
 })
