@@ -45,6 +45,21 @@ export const category = defineType({
   hidden: true,
 },
     defineField({
+      name: 'template',
+      title: 'Post Template',
+      type: 'string',
+      description: 'Choose the layout used for post detail pages in this category.',
+      options: {
+        list: [
+          { title: 'Standard Article', value: 'standard' },
+          { title: 'Case Study', value: 'caseStudy' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'standard',
+    }),
+
+    defineField({
       name: 'seo',
       title: 'SEO',
       type: 'seo',

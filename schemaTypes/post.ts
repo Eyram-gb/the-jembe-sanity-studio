@@ -70,6 +70,14 @@ export const post = defineType({
       of: [{type: 'block'}],
     }),
     defineField({
+      name: 'sections',
+      title: 'Case Study Sections',
+      type: 'array',
+      description: 'Add structured sections here when this post belongs to a Case Study category. Leave empty for standard articles.',
+      of: [{ type: 'caseStudySection' }],
+    }),
+
+    defineField({
       name: 'orderRank',
       title: 'Order Rank',
       type: 'string',
