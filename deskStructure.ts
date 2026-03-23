@@ -17,7 +17,15 @@ export const deskStructure = (S: any, context: any) =>
         context,
       }),
 
+      S.divider(),
+      S.listItem()
+        .title('Page SEO')
+        .icon(() => '🔍')
+        .child(
+          S.documentTypeList('pageSeo').title('Page SEO')
+        ),
+
       ...S.documentTypeListItems().filter(
-        (listItem: any) => !["category", "post"].includes(listItem.getId())
+        (listItem: any) => !['category', 'post', 'pageSeo'].includes(listItem.getId())
       ),
     ]);

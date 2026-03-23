@@ -9,8 +9,30 @@ export const caseStudySection = defineType({
       name: 'label',
       title: 'Section Label',
       type: 'string',
-      description: 'Short all-caps label shown above the title (e.g. CONTEXT, CHALLENGE, APPROACH, IMPLICATIONS, CRITICAL INSIGHT, IMPACT)',
+      description: 'Choose a preset label, or select "Custom" to enter your own.',
+      options: {
+        list: [
+          { title: 'CONTEXT', value: 'CONTEXT' },
+          { title: 'CHALLENGE', value: 'CHALLENGE' },
+          { title: 'APPROACH', value: 'APPROACH' },
+          { title: 'IMPLICATIONS', value: 'IMPLICATIONS' },
+          { title: 'CRITICAL INSIGHT', value: 'CRITICAL INSIGHT' },
+          { title: 'IMPACT', value: 'IMPACT' },
+          { title: 'COMPARATIVE ANALYSIS', value: 'COMPARATIVE ANALYSIS' },
+          { title: 'THE STRATEGIC CHALLENGE', value: 'THE STRATEGIC CHALLENGE' },
+          { title: 'Custom…', value: 'custom' },
+        ],
+      },
     }),
+
+    defineField({
+      name: 'labelCustom',
+      title: 'Custom Label Text',
+      type: 'string',
+      description: 'Enter your custom label text (displayed in all-caps).',
+      hidden: ({ parent }) => parent?.label !== 'custom',
+    }),
+
     defineField({
       name: 'title',
       title: 'Section Title',
