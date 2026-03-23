@@ -37,7 +37,7 @@ export const caseStudySection = defineType({
       name: 'title',
       title: 'Section Title',
       type: 'string',
-      validation: (rule) => rule.required(),
+      // validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'body',
