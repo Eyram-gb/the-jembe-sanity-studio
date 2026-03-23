@@ -55,6 +55,7 @@ export const caseStudySection = defineType({
       name: 'imagePosition',
       title: 'Image Position',
       type: 'string',
+      description: 'Controls where the image (uploaded or default) appears relative to the text.',
       options: {
         list: [
           { title: 'Right (float alongside text)', value: 'right' },
@@ -64,7 +65,6 @@ export const caseStudySection = defineType({
         layout: 'radio',
       },
       initialValue: 'right',
-      hidden: ({ parent }) => !parent?.image,
     }),
     defineField({
       name: 'stats',
