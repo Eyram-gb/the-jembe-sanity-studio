@@ -14,10 +14,12 @@ export const pageSeo = defineType({
         list: [
           { title: 'Home', value: 'home' },
           { title: 'About', value: 'about' },
+          { title: 'Approach', value: 'approach' },
           { title: 'Contact', value: 'contact' },
+          { title: 'FAQ', value: 'faq' },
           { title: 'Insights (listing)', value: 'insights' },
-          { title: 'What We Do', value: 'what-we-do' },
-          { title: 'Work With Us', value: 'work-with-us' },
+          { title: 'Services', value: 'services' },
+          { title: 'Why Culture', value: 'why-culture' },
         ],
       },
       validation: (rule) => rule.required(),
@@ -37,10 +39,12 @@ export const pageSeo = defineType({
       const labels: Record<string, string> = {
         home: 'Home',
         about: 'About',
+        approach: 'Approach',
         contact: 'Contact',
+        faq: 'FAQ',
         insights: 'Insights (listing)',
-        'what-we-do': 'What We Do',
-        'work-with-us': 'Work With Us',
+        services: 'Services',
+        'why-culture': 'Why Culture',
       }
       return {
         title: labels[page] ?? page,
