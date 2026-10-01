@@ -18,6 +18,7 @@ export const pageSeo = defineType({
           { title: 'Contact', value: 'contact' },
           { title: 'FAQ', value: 'faq' },
           { title: 'Insights (listing)', value: 'insights' },
+          { title: 'Quiz', value: 'quiz' },
           { title: 'Services', value: 'services' },
           { title: 'Why Culture', value: 'why-culture' },
         ],
@@ -43,6 +44,7 @@ export const pageSeo = defineType({
         contact: 'Contact',
         faq: 'FAQ',
         insights: 'Insights (listing)',
+        quiz: 'Quiz',
         services: 'Services',
         'why-culture': 'Why Culture',
       }
